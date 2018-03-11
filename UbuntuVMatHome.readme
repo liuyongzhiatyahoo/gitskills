@@ -1,0 +1,92 @@
+Record of installation and status of Virtual Machine 
+
+
+Ubuntu 64bit 
+Guest Topoloty: Bridge
+System Setting -> Network Proxy 10.0.0.5:1080 (host IP:port)
+
+Default sources.list, $sudo apt-get update %%successfully 
+
+
+====================================================
+Version 1
+follow: https://chainhero.io/2017/07/tutorial-build-blockchain-app/
+Finish Section 3, a) and b)
+$sudo apt install docker.io %has some broken pacakge, --force-missing 
+Go version 1.9.2 was downloaded from https://golang.org/dl/
+
+
+====================================================
+Version 2
+clone fabric successfully by
+$git clone https://github.com/hyperledger/fabric.git
+
+
+====================================================
+Version 3
+It requires $sudo apt install libltdl-dev
+before 
+$go get github.com/hyperledger/fabric-sdk-go/pkg/fabric-client
+$go get github.com/hyperledger/fabric-sdk-go/pkg/fabric-ca-client
+
+stuck at $cd $GOPATH/src/github.com/hyperledger/fabric-sdk-go && make
+message reads: unable to access 'https://go.googlesource.com/tools/': 
+Failed to connect to go.googlesource.com port 443:
+
+
+
+====================================================
+Version 4
+
+network proxy changed to a fixed: 10.0.0.99:1080 because even if the netwk
+PC is restarted, its fixed IP address won't change.
+
+$make %%leading to error
+'unit-test' failed
+
+
+installed Git 2.7.4
+
+if port 443 problem
+git config --global --list
+git config --global http.proxy 10.0.0.99:1080
+
+$make integration-test
+%%%Integration tests passed, Step 3 completed!!!
+
+====================================================
+Version 5
+
+$docker-compose up %%failed, even tried to replace ymal file.
+
+$ git config --global user.name "Your Name"
+$ git config --global user.email "email@example.com"
+
+For AWS IoT service,
+an SDK is downloaded at Downloads\connect_device_package\ which contains 
+a key pairs and a simple start.sh
+A few packages are installed: curl, nodejs 8, npm.
+$ curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+$ sudo apt-get install -y nodejs
+node v8.9.4, npm v5.6.0 are installed.
+$ ./start.sh 
+and AWS console is updated shows the device is connected.
+
+For "Node.js the Right Way", original source code is downloaded and unzipped
+into folder Document\noderightway\
+
+Failed to continue Fabric Integration-test!
+
+Continue practice Git by following https://www.liaoxuefeng.com/wiki/
+Installed SSH server, but .ssh is not found. SSH key generation continues, and a pair of keys are generated. The public key is loaded to the github/lyzatyahoo account. Synch with local .git and remote repository are successful. 
+
+====================================================
+Version 6
+
+MQTT: W.R.T https://www.vultr.com/docs/how-to-install-mosquitto-mqtt-broker-server-on-ubuntu-16-04 
+$ sudo apt-get install mosquitto  %%installed mosquitto 
+$ sudo systemctl status mosquitto %%status 
+$ sudo lsof -i :1883 			  %%ports that is listening
+$ sudo apt-get install mosquitto-clients %%client is used for test
+$ mosquitto_sub -t "test"
+$ mosquitto_pub -m "message from mosquitto_pub client" -t "test"
