@@ -1,1 +1,3 @@
 It is the best of times, it is the worst of times!
+
+Mar. 12. Node.js the right way, chapter fs. repeat the first two programs.
