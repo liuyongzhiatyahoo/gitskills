@@ -14,36 +14,28 @@ follow: https://chainhero.io/2017/07/tutorial-build-blockchain-app/
 Finish Section 3, a) and b)
 $sudo apt install docker.io %has some broken pacakge, --force-missing 
 Go version 1.9.2 was downloaded from https://golang.org/dl/
-
-
 ====================================================
 Version 2
 clone fabric successfully by
 $git clone https://github.com/hyperledger/fabric.git
-
-
 ====================================================
 Version 3
 It requires $sudo apt install libltdl-dev
 before 
 $go get github.com/hyperledger/fabric-sdk-go/pkg/fabric-client
 $go get github.com/hyperledger/fabric-sdk-go/pkg/fabric-ca-client
-
 stuck at $cd $GOPATH/src/github.com/hyperledger/fabric-sdk-go && make
 message reads: unable to access 'https://go.googlesource.com/tools/': 
 Failed to connect to go.googlesource.com port 443:
-
-
-
 ====================================================
 Version 4
 
 network proxy changed to a fixed: 10.0.0.99:1080 because even if the netwk
-PC is restarted, its fixed IP address won't change.
+PC is restarted, its IP address won't change.
 
+Continue with previous chainhero.io
 $make %%leading to error
 'unit-test' failed
-
 
 installed Git 2.7.4
 
@@ -78,6 +70,7 @@ into folder Document\noderightway\
 Failed to continue Fabric Integration-test!
 
 Continue practice Git by following https://www.liaoxuefeng.com/wiki/
+Github account: lyzatyahoo, lyz@yahoo.com, Lxxlxx1xx
 Installed SSH server, but .ssh is not found. SSH key generation continues, and a pair of keys are generated. The public key is loaded to the github/lyzatyahoo account. Synch with local .git and remote repository are successful. 
 
 ====================================================
