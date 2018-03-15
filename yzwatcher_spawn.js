@@ -7,7 +7,7 @@ const 	fs = require('fs'),
 let	counter = 0;
 
 if (!filename)
-	throw error ("The command is short of an argument: node --harmony yzWatch.js target.txt");
+	throw error ("The command is of form: node --harmony yzwatch.js target.txt");
 
 fs.watch(filename, function(){
 	let
@@ -22,14 +22,13 @@ fs.watch(filename, function(){
 			parts = output.split(/\s+/);
 		counter = counter + 1;		
 		console.dir([parts[0], parts[4], parts[8]]);
-		console.dir("Modified " + counter + " Times!!!");
-		console.dir(" ");
+		console.log("Modified " + counter + " Times!\n");
 	});
 
 	
 });
 
-console.log("This Program watch file changes \n using concept of Emitter Event, channel");
+console.log("This Program watches file changes \nusing concepts of emitter event, channel");
 console.log(filename + " is under watch!!!\n");
 
 
