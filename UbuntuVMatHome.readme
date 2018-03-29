@@ -87,3 +87,9 @@ $ mosquitto_pub -m "message from mosquitto_pub client" -t "test"
 
 "Node.js the Right Way"-"Filesystem"
 
+"Hands-on Machine Learning with Scikit-Learn and TensorFlow"
+git clone https://github.com/ageron/handson-ml  %download the materials
+and placed at ~/Documents/handson-ml/
+
+$sudo apt install python-pip  %%install pip 8.1.1
+then follow jupyter.org/install which points to anaconda; then download anaconda 5.1 for linux installer and python 3.6 64bit x86.
