@@ -93,3 +93,5 @@ and placed at ~/Documents/handson-ml/
 
 $sudo apt install python-pip  %%install pip 8.1.1
 then follow jupyter.org/install which points to anaconda; then download anaconda 5.1 for linux installer and python 3.6 64bit x86.
+Anaconda is a package and environment manager, incl. many libraries and python
+Jupyter-Notebook is an client server application, allows the user to manage his project, both python engine and sources codes.  
